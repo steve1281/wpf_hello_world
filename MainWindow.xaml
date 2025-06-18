@@ -8,10 +8,11 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="210,75,0,0" TextWrapping="Wrap" Text="Select a Radio Button below, press Display button" VerticalAlignment="Top"/>
-        <RadioButton Name="HelloRadio"  Content="Hello" HorizontalAlignment="Left" Margin="200,189,0,0" VerticalAlignment="Top" IsChecked="True"/>
-        <RadioButton Name="GoodByRadio" Content="GoodBye" HorizontalAlignment="Left" Margin="400,189,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.783,0.69"/>
-        <Button Name="DisplayButton" Content="Display" HorizontalAlignment="Left" Margin="297,325,0,0" VerticalAlignment="Top" Click="DisplayButton_Click"/>
-        <TextBlock Name="MessageTextBlock" HorizontalAlignment="Left" Margin="230,260,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <RadioButton Name="HelloRadio"  Content="Hello" HorizontalAlignment="Left" Margin="200,104,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <RadioButton Name="GoodByRadio" Content="GoodBye" HorizontalAlignment="Left" Margin="400,104,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.783,0.69"/>
+        <Button Name="DisplayButton" Content="Display" HorizontalAlignment="Left" Margin="238,380,0,0" VerticalAlignment="Top" Click="DisplayButton_Click"/>
+        <TextBlock Name="MessageTextBlock" HorizontalAlignment="Left" Margin="230,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <Button x:Name="LinqTestsButton" Content="LinqTests" HorizontalAlignment="Left" Margin="390,380,0,0" VerticalAlignment="Top" Click="LinqTestsButton_Click" />
 
     </Grid>
 </Window>

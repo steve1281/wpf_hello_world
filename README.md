@@ -17,3 +17,9 @@ Things you don't need to remember, but might be useful later on:
 
 - you can print to the visual studio debug using *Trace.Writeln("message");* 
 - you can tell the project to launch a console, and then use *Console.Writeln ...*
+
+
+Adding a branch:
+
+- IDE has tools for this, or just *git checkout -b link_understanding_basics*
+- 
