@@ -30,6 +30,7 @@ Adding a branch:
 - Do the usual thing:  *git add .*, * git commit -m ...*
 - if the branch needs to go to the remote, you will need to set upstream it. (e.g for a code review)
 *git push --set-upstream origin linq_understanding_basics*
+- after you do that once, you can just *push* it
 - another approach, merge it to your local "main" and then push that. Depends on the team really.
 
 	
