@@ -1,6 +1,6 @@
 Hello World WPF 
 
-Probably the simplest example that demonstrates displaying text, reading elements, and updating text.
+Probably the simplest example that demonstrates displaying text, reading elements, and updating text, some lambda/linq.
 
 
 Key things to remember (for this simple example):
@@ -17,6 +17,7 @@ Adding Linq and Lambda:
 - so SQL like commands map onto linq, and similar methods exist in the lambda notation
 - sounds like M$ prefers Linq; my experience leans more toward lambda
 - more on this later...
+- note that assigning a linq variable ( *result = from s in ...*) doesn't run it.  It executes when result is used. 
 
 Things you don't need to remember, but might be useful later on:
 
@@ -24,7 +25,7 @@ Things you don't need to remember, but might be useful later on:
 - you can tell the project to launch a console, and then use *Console.Writeln ...*
 
 
-Adding a branch:
+Adding a branch, noting that there are different ways of doing this:
 
 - IDE has tools for this, or just *git checkout -b link_understanding_basics*
 - Do the usual thing:  *git add .*, * git commit -m ...*
@@ -32,4 +33,6 @@ Adding a branch:
 *git push --set-upstream origin linq_understanding_basics*
 - after you do that once, you can just *push* it
 - another approach, merge it to your local "main" and then push that. Depends on the team really.
-
+- List branches with simple *git branch*
+- List remote branches with * git branch -r*
+- Merge into the current branch (so typically, checkout main)  *git merge feature_branch*

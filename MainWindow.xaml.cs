@@ -12,9 +12,16 @@ using System.Xml.Linq;
 
 namespace Hello_World
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
+    enum Country { USA, UK, Pakistan  }
+    class Student
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public Country Country { get; set; }
+    }
+
+
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -37,6 +44,54 @@ namespace Hello_World
         }
 
         private void LinqTestsButton_Click(object sender, RoutedEventArgs e)
+        {
+            StringBuilder sb = new();
+            
+            List<Student> sList = new List<Student>() {
+                new Student() {
+                    Name = "John",
+                    Age = 25, 
+                    Country= Country.USA
+                },
+                new Student() {
+                    Name = "Ahmed",
+                    Age = 20,
+                    Country= Country.UK
+                },
+                new Student() {
+                    Name = "Zaheer",
+                    Age = 24,
+                    Country= Country.Pakistan
+                },
+
+
+            };
+
+            var result = from s in sList
+                         where s.Age <= 24
+                         orderby s.Name
+                         select s;
+
+            foreach (var item in result)
+            {
+                sb.AppendLine("Name: " + item.Name + "\tAge: " + item.Age + "\tCountry: " + item.Country);
+            }
+
+            sb.AppendLine();
+
+            var resultL = sList.Where(s => s.Age <= 24).OrderBy(s => s.Name);
+
+            foreach (var item in resultL)
+            {
+                sb.AppendLine("Name: " + item.Name + "\tAge: " + item.Age + "\tCountry: " + item.Country);
+            }
+
+
+            MessageTextBlock.Text = sb.ToString();
+
+        }
+
+        public void LinqOnStringList()
         {
             List<string> names = new List<string>() { 
                 "John",
