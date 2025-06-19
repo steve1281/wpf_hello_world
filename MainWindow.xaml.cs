@@ -113,5 +113,10 @@ namespace Hello_World
             MessageTextBlock.Text = sb.ToString();
 
         }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
