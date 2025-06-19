@@ -31,19 +31,23 @@ namespace Hello_World
 
         private void DisplayButton_Click(object sender, RoutedEventArgs e)
         {
-            if (HelloRadio.IsChecked == true)
+            if (LinqIntTest.IsChecked == true)
             {
-                MessageTextBlock.Text = "Hello World";
-                
+                LinqOnInt();
             }
-            if (GoodByRadio.IsChecked == true)
+            if (LinqStringTest.IsChecked == true)
             {
-                MessageTextBlock.Text = "GoodBye World";
-                
+                LinqOnStringList();
             }
+            if (LinqClassTest.IsChecked == true)
+            {
+                LinqOnClassList();
+            }
+
         }
 
-        private void LinqTestsButton_Click(object sender, RoutedEventArgs e)
+  
+        public void LinqOnClassList()
         {
             StringBuilder sb = new();
             
