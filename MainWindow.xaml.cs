@@ -37,6 +37,32 @@ namespace Hello_World
 
         private void LinqTestsButton_Click(object sender, RoutedEventArgs e)
         {
+            List<string> names = new List<string>() { 
+                "John",
+                "Ben",
+                "Ahmed",
+                "Michael",
+                "David",
+                "Zeeshan"
+
+            };
+
+            StringBuilder sb = new();
+
+            IEnumerable<string> result = from n in names select n;
+            foreach (string name in result)
+            {
+                sb.AppendLine(name);
+            }
+
+
+
+            MessageTextBlock.Text = sb.ToString();
+
+        }
+
+        public void LinqOnInt() { 
+            
             int[] nums = { 3, 5, 4, 6, 7, 8, 9, 2, 4, 5, 6, 7, 822, 776, 88 };
 
             StringBuilder sb = new StringBuilder();
