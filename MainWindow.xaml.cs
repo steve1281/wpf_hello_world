@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace Hello_World
 {
@@ -39,7 +40,7 @@ namespace Hello_World
         {
             List<string> names = new List<string>() { 
                 "John",
-                "Ben",
+                "Bengston",
                 "Ahmed",
                 "Michael",
                 "David",
@@ -49,12 +50,26 @@ namespace Hello_World
 
             StringBuilder sb = new();
 
-            IEnumerable<string> result = from n in names select n;
+            // linq
+            IEnumerable<string> result = from n in names
+                                         where n.Length <= 5
+                                         orderby n
+                                         select n;
+
             foreach (string name in result)
             {
                 sb.AppendLine(name);
             }
 
+            sb.AppendLine();
+
+            // lambda
+            IEnumerable<string> resultL = names.Where(n => n.Length <= 5).OrderBy(n => n);
+
+            foreach (string name in resultL)
+            {
+                sb.AppendLine(name);
+            }
 
 
             MessageTextBlock.Text = sb.ToString();
